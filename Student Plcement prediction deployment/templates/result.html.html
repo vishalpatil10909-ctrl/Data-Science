@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <!-- Same CSS as above -->
+</head>
+<body>
+    <div class="container">
+        {% if placed %}
+            <div class="results placed" style="display: block;">
+                <h2>🎉 CONGRATULATIONS!</h2>
+                <p>You are likely to get PLACED!</p>
+        {% else %}
+            <div class="results not-placed" style="display: block;">
+                <h2>⚠️ IMPROVEMENT NEEDED</h2>
+                <p>You may face challenges in placement.</p>
+        {% endif %}
+                <div style="margin-top: 20px;">
+                    <p><strong>Confidence:</strong> {{ confidence }}%</p>
+                    <p>Based on: CGPA ({{ cgpa }}), IQ ({{ iq }}), Profile Score ({{ profile_score }})</p>
+                </div>
+                <a href="/" class="back-btn" style="display: inline-block; text-decoration: none; margin-top: 20px;">Predict Again</a>
+            </div>
+    </div>
+</body>
+</html>
